@@ -1,9 +1,10 @@
+-- Deploy hashids-plgpsql:create.function.hashids.decode to pg
+-- requires: create.function.hashids.setup_alphabet
+-- requires: create.function.hashids.consistent_shuffle
+-- requires: create.function.hashids.unhash
+-- requires: create.function.hashids.encode_list
 
-DROP FUNCTION if exists hashids.decode(text, text, integer, text, boolean);
-DROP FUNCTION if exists hashids.decode(text, text, integer, text);
-DROP FUNCTION if exists hashids.decode(text, text, integer);
-DROP FUNCTION if exists hashids.decode(text, text);
-DROP FUNCTION if exists hashids.decode(text);
+BEGIN;
 
 CREATE OR REPLACE FUNCTION hashids.decode(
     in p_hash text,
@@ -185,3 +186,5 @@ END;
 $$
   LANGUAGE plpgsql IMMUTABLE
   COST 300;
+
+COMMIT;
