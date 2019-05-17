@@ -1,10 +1,9 @@
+-- Deploy hashids-plgpsql:create.function.hashids.encode_list to pg
+-- requires: create.function.hashids.setup_alphabet
+-- requires: create.function.hashids.consistent_shuffle
+-- requires: create.function.hashids.hash
 
-drop function if exists hashids.encode_list(bigint[], text, integer, text, boolean);
-drop function if exists hashids.encode_list(bigint[], text, integer, text);
-drop function if exists hashids.encode_list(bigint[], text, integer);
-drop function if exists hashids.encode_list(bigint[], text);
-drop function if exists hashids.encode_list(bigint[]);
-
+BEGIN;
 
 CREATE OR REPLACE FUNCTION hashids.encode_list(
     in p_numbers bigint[],
@@ -171,4 +170,4 @@ $$
   LANGUAGE plpgsql IMMUTABLE
   COST 300;
 
-
+COMMIT;
