@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP FUNCTION IF EXISTS hashids.setup_alphabet(text,text,text,text)
+DROP FUNCTION IF EXISTS hashids.setup_alphabet(text,text,text,text);
 
 COMMIT;
