@@ -1,0 +1,4 @@
+%syntax-version=1.0.0
+%project=hashids-plgpsql
+%uri=https://github.com/OneAngryDBA/plpg_hashids
+
