@@ -6,3 +6,4 @@ create.schema.hashids 2019-05-17T03:39:23Z Matthew Brennan <xelldran1@Matts-MBP.
 create.function.hashids.consistent_shuffle 2019-05-17T03:44:22Z Matthew Brennan <xelldran1@Matts-MBP.fios-router.home> # constent_shuffle function from 1_create_hashids_constent_shuffle.sql
 create.function.hashids.clean_seps_from_alphabet [create.schema.hashids] 2019-05-17T03:49:20Z Matthew Brennan <xelldran1@Matts-MBP.fios-router.home> # clean_seps_from_alphabet from 2_create_hashids_setup_seps.sql
 create.function.hashids.clean_alphabet_from_seps [create.schema.hashids] 2019-05-17T04:00:22Z Matthew Brennan <xelldran1@Matts-MBP.fios-router.home> # clean_alphabet_from_seps from 2_create_hashids_setup_seps.sql
+create.function.hashids.distinct_alphabet [create.schema.hashids] 2019-05-17T04:03:44Z Matthew Brennan <xelldran1@Matts-MBP.fios-router.home> # distinct_alphabet from 2_create_hashids_setup_seps.sql
