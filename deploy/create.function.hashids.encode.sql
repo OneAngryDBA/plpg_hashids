@@ -1,8 +1,7 @@
-DROP FUNCTION if exists hashids.encode(bigint);
-DROP FUNCTION if exists hashids.encode(bigint, text);
-DROP FUNCTION if exists hashids.encode(bigint, text, integer);
-DROP FUNCTION if exists hashids.encode(bigint, text, integer, text);
-DROP FUNCTION if exists hashids.encode(bigint, text, integer, text, boolean);
+-- Deploy hashids-plgpsql:create.function.hashids.encode to pg
+-- requires: create.function.hashids.encode_list
+
+BEGIN;
 
 CREATE OR REPLACE FUNCTION hashids.encode(in p_number bigint)
   RETURNS text AS
@@ -99,3 +98,5 @@ END;
 $$
   LANGUAGE plpgsql IMMUTABLE
   COST 300;
+
+COMMIT;
