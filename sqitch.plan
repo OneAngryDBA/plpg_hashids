@@ -2,3 +2,4 @@
 %project=hashids-plgpsql
 %uri=https://github.com/OneAngryDBA/plpg_hashids
 
+create.schema.hashids 2019-05-17T03:39:23Z Matthew Brennan <xelldran1@Matts-MBP.fios-router.home> # Schema for Hashids functions to live
