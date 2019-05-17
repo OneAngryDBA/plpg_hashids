@@ -166,7 +166,10 @@ $$
   LANGUAGE plpgsql IMMUTABLE
   COST 300;
 
-CREATE OR REPLACE FUNCTION hashids.decode( 
+ -- Including the Alt function here because I'm too tired to debug this completely
+ -- Since its not my code i've renamed the function which is erroring.
+ -- I'll do more tests to make sure that I can kill off this function.
+CREATE OR REPLACE FUNCTION hashids.decode_alt( 
   in p_hash text, 
   in p_salt text,
   in p_min_hash_length integer,
